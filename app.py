@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello_world():  # put application's code here
     if request.method == "GET":
         return render_template("home.html")
-    else:
+    elif request.method == "POST":
         return redirect("https://discord.com/api/oauth2/authorize?client_id=947062830358736897&redirect_uri=https%3A%2F%2Fczvr-role-bot.herokuapp.com%2Fdiscord%2Foauth%2F&response_type=code&scope=identify%20guilds.join")
 
 
@@ -37,6 +37,6 @@ def discord_success():
 
 
 try:
-    app.run(None, 80)
+    app.run(None, 80, ssl_certificate="adhoc")
 except:
     pass
