@@ -8,8 +8,5 @@ def hello_world():  # put application's code here
     return 'Hello World!'
 
 
-def main():
-    try:
-        app.run()
-    except:
-        pass
+try:
+    app.run(None, 80)
