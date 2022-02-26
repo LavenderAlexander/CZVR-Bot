@@ -10,3 +10,5 @@ def hello_world():  # put application's code here
 
 try:
     app.run(None, 80)
+except:
+    pass
