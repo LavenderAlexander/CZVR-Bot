@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 
-@app.route('/', allowed_methods=["GET", "POST"])
+@app.route('/', allowed_method=["GET", "POST"])
 def hello_world():  # put application's code here
     if request.method == "GET":
         return render_template("home.html")
