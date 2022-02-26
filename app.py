@@ -43,4 +43,4 @@ try:
         cert.write(os.environ.get("SSL_CERT"))
     app.run(None, 80, ssl_context=("cert.pem", "key.pem"))
 except Exception as e:
-    print (e)
+    print(e)
