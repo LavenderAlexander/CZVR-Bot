@@ -38,5 +38,5 @@ def discord_success():
 
 try:
     app.run(None, 80, ssl_certificate="adhoc")
-except:
-    pass
+except Exception as e:
+    print (e)
