@@ -1,1 +1,1 @@
-web gunicorn app:.well-known/acme-challenge/app
+web gunicorn .well-known/acme-challenge/app:app
