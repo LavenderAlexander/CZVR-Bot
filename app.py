@@ -37,6 +37,10 @@ def discord_success():
 
 
 try:
-    app.run(None, 80, ssl_certificate="adhoc")
+    with open("key.pem", "w") as key:
+        key.write(os.environ.get("SSL_KEY"))
+    with open("cert.pem", "w") as cert:
+        cert.write(os.environ.get("SSL_CERT"))
+    app.run(None, 80, ssl_context=("cert.pem", "key.pem"))
 except Exception as e:
     print (e)
